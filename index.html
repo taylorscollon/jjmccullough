@@ -1,0 +1,37 @@
+---
+layout: default
+title: 
+home: true
+---
+
+<section class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="half-width">
+        <img src="/img/profile.jpg" alt="">
+      </div>
+      <div class="half-width">
+        <h2>Hi, I'm J.J.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus fuga alias deleniti suscipit, hic placeat aspernatur at maiores dolor et, error veritatis, nostrum numquam qui voluptatibus obcaecati dignissimos necessitatibus! In.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pages">
+  <div class="container">
+    {% for page in site.pages %}
+    {% if page.tags contains "home" %}
+    <div class="row page-excerpt-container">
+      <div class="columns small-12">
+        <div class="page-excerpt">
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.excerpt }}</p>
+          <a href="{{ page.url }}">More</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>

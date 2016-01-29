@@ -1,0 +1,19 @@
+footer {
+  background-color: $secondary-color;
+  padding: 40px 0;
+  ul {
+    display: inline-block;
+    @extend %horizontal-list;
+  }
+  .copyright {
+    display: inline-block;
+    margin: 0;
+    @include media($medium-screen-up) {
+      float: right;
+    }
+  }
+  .credit {
+    font-size: 0.85rem;
+    margin-top: 25px;
+  }
+}

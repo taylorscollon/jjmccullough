@@ -1,0 +1,57 @@
+
+
+%fullWidth {
+  max-width: 100%;
+  width: 100%;
+}
+
+%bg-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+%horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+@mixin button($background, $color) {
+  background: $background;
+  color: $color !important;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-family: $sans;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  box-shadow: 0;
+  cursor: pointer;
+  &:hover {
+    background: lighten($background,10%);
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+$small-screen: 500px;
+$medium-screen: 760px;
+$large-screen: 1020px;
+
+$small-screen-up: new-breakpoint(min-width $small-screen );
+$medium-screen-up: new-breakpoint(min-width $medium-screen );
+$large-screen-up: new-breakpoint(min-width $large-screen );
+  
+

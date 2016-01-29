@@ -1,0 +1,82 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "variables";
+@import "recycling";
+@import "typography/_typeplate";
+@import "footer";
+@import "sidebar";
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  padding: 75px 0;
+}
+
+.container {
+  @include outer-container();
+}
+
+.row {
+  @include row();
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+
+.full-width {
+  @include span-columns(12);
+}
+
+.half-width {
+  @include span-columns(12);
+  @include media($medium-screen-up) {
+    @include span-columns(6);
+  }
+}
+
+.intro {
+  background-color: $secondary-color;
+}
+
+.page-excerpt-container:last-child .page-excerpt {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.page-excerpt {
+  @include span-columns(12);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px $light-grey;
+  @include media($medium-screen-up) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+.page-container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @include span-columns(12);
+  @include media($medium-screen-up) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+.page-content {
+  margin-top: 50px;
+}
