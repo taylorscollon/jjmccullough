@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include base.html %}
+{% include head.html %}
+
 
   <body>
 
@@ -17,7 +19,7 @@
         <span></span>
       </div>
 
-  <script src="../js/main.js"></script>
+  <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 
 </html>
 
