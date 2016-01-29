@@ -1,0 +1,24 @@
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <h4>Navigate</h4>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+
+      {% assign pages_list = site.pages | sort:"url" %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+  <div class="sidebar-section">
+    <h4>Contact</h4>
+    <div class="contact-links">
+      <a target="_blank" href="https://twitter.com/JJ_McCullough" class="sidebar-nav-item">Twitter</a>
+      <a target="_blank" href="" class="sidebar-nav-item">Email</a>
+    </div>
+  </div>
+</div>
