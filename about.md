@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about
+permalink: /about/
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam expedita, molestiae reiciendis. Tempore officiis, recusandae iure, neque doloremque sed error molestiae laudantium hic deleniti autem repellendus. Id laudantium quod magnam.'
 tags: 'home'
 ---
