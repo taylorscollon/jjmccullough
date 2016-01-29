@@ -8,7 +8,7 @@ home: true
   <div class="container">
     <div class="row">
       <div class="half-width">
-        <img src="/img/profile.jpg" alt="">
+        <img src="{{ base }}/img/profile.jpg" alt="">
       </div>
       <div class="half-width">
         <h2>Hi, I'm J.J.</h2>
@@ -27,7 +27,7 @@ home: true
         <div class="page-excerpt">
           <h3>{{ page.title }}</h3>
           <p>{{ page.excerpt }}</p>
-          <a href="{{ page.url }}">More</a>
+          <a href="{{ page.url | prepend: site.baseurl }}">More</a>
         </div>
       </div>
     </div>
