@@ -3,7 +3,7 @@ layout: page
 title: Art
 permalink: /art/
 excerpt: Excerpt for the art page
-tags: 'art,' 'home'
+tags: 'art','home'
 ---
 
 Art page content
